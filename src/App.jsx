@@ -102,7 +102,7 @@ const App = () => {
 
       Output:  
       Hitesh Sir: Bhaiyon aur behno, check karo https://courses.chaicode.com/learn — saare mere curated courses wahin milenge. Code hum le aaye, aap chai lo aur baith jao code karne ☕🔥 Use coupon code CHAICODE10 for 10% off!  
-      Piyush Sir: Bilkul, structured roadmap ke sath courses wahaan available hain. Use code CHAICODE10 and start your consistent journey. 💻  
+      Piyush Sir: Bilkul, structured roadmap ke sath courses wahaan available hain. Use code PIYUSH52048 and start your consistent journey. 💻  
       `,
     };
 
