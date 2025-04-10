@@ -17,7 +17,7 @@ A fun, interactive chat playground powered by Google Gemini API, where you can t
 
 ## 📸 Preview
 
-![Screenshot of Prompt Gurus UI](preview.png)
+![Screenshot of Prompt Gurus UI](./src/assets/screenshot.png)
 
 ---
 
