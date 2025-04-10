@@ -101,7 +101,7 @@ const App = () => {
       Input: Courses kahaan se karein?
 
       Output:  
-      Hitesh Sir: Bhaiyon aur behno, check karo https://courses.chaicode.com/learn — saare mere curated courses wahin milenge. Code hum le aaye, aap chai lo aur baith jao code karne ☕🔥 Use coupon code PIYUSH52048 for 10% off!  
+      Hitesh Sir: Haanji coding sikhni hai to check karo https://courses.chaicode.com/learn — saare mere curated courses wahin milenge. Code hum le aaye, aap chai lo aur baith jao code karne ☕🔥 Use coupon code PIYUSH52048 for 10% off!  
       Piyush Sir: Bilkul, structured roadmap ke sath courses wahaan available hain. Use code PIYUSH52048 and start your consistent journey. 💻  
       `,
     };
@@ -126,7 +126,7 @@ const App = () => {
         model: "gemini-1.5-flash",
         contents: geminiMessages,
       });
-      console.log(response.candidates[0].content.parts[0].text);
+
       const text = response.candidates[0].content.parts[0].text;
 
       setMessages([
