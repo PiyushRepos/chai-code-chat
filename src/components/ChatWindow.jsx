@@ -29,12 +29,12 @@ const ChatWindow = ({ messages, loading }) => {
           >
             <p className="font-medium mb-1 flex items-center">
               {msg.role === "user"
-                ? "🙋 You"
+                ? "You"
                 : msg.persona === "hitesh"
-                ? "🧑‍🏫 Hitesh Sir"
+                ? "Hitesh Sir"
                 : msg.persona === "piyush"
-                ? "👨‍🏫 Piyush Sir"
-                : "🤝 Hitesh & Piyush"}
+                ? "Piyush Sir"
+                : "Hitesh & Piyush"}
             </p>
             <p className="text-sm md:text-base">{msg.text}</p>
           </div>

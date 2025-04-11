@@ -33,7 +33,7 @@ const PromptInput = ({ onSend, loading }) => {
       className="flex gap-2 items-start border-t pt-4"
     >
       <div className="flex-1 relative">
-        <textarea
+        <input
           ref={textareaRef}
           value={prompt}
           onChange={(e) => setPrompt(e.target.value)}

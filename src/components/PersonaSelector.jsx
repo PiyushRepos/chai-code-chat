@@ -18,19 +18,19 @@ const PersonaSelector = ({ selected, setSelected }) => {
         onClick={() => setSelected("hitesh")}
         className={buttonClasses("hitesh")}
       >
-        <span className="mr-2">🧑‍🏫</span> Hitesh Sir
+        Hitesh Sir
       </button>
       <button
         onClick={() => setSelected("piyush")}
         className={buttonClasses("piyush")}
       >
-        <span className="mr-2">👨‍🏫</span> Piyush Sir
+        Piyush Sir
       </button>
       <button
         onClick={() => setSelected("both")}
         className={buttonClasses("both")}
       >
-        <span className="mr-2">🤝</span> Both
+        Both
       </button>
     </div>
   );
