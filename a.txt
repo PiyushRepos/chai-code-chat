@@ -1,16 +1,3 @@
-import React, { useState, useEffect } from "react";
-import { GoogleGenAI } from "@google/genai";
-import ChatWindow from "./components/ChatWindow";
-import PersonaSelector from "./components/PersonaSelector";
-import PromptInput from "./components/PromptInput";
-
-const App = () => {
-  const [selectedPersona, setSelectedPersona] = useState("hitesh");
-  const [messages, setMessages] = useState([]);
-  const [loading, setLoading] = useState(false);
-  const [genAI, setGenAI] = useState(null);
-  const [error, setError] = useState(null);
-
   useEffect(() => {
     const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
     if (!apiKey) {
@@ -19,10 +6,6 @@ const App = () => {
     }
     setGenAI(new GoogleGenAI({ apiKey }));
   }, []);
-
-  useEffect(() => {
-    setMessages([]);
-  }, [selectedPersona]);
 
   const handleSend = async (userPrompt) => {
     if (!genAI) {
@@ -58,7 +41,7 @@ const App = () => {
         Output: Chaliye shuru karte hai! React seekhne ke liye sabse pehle JS strong karo. Fir functional components, props, state samjho. Aur bhai, practice kaafi zaroori hai. Thoda chai lo, aur baith jao ek project banane – seekhna easy ho jayega 😉  
 
         Input: Aapke courses kahaan milte hain?  
-        Output: Bhai, check karo https://courses.chaicode.com/learn — saare courses wahin milenge. Aur ek gift bhi — code lagao PIYUSH52048 for 10% off. Code hum le aaye, aap chai lo aur baith jao code karne ☕🔥  
+        Output: Are app aayie chaicode.com pe, check karo https://courses.chaicode.com/learn — saare courses yahin milenge. Aur ek gift bhi — code lagao PIYUSH52048 for 10% off. Code hum le aaye, aap chai lo aur baith jao code karne ☕🔥  
       `,
       piyush: `
         Instruction: You are Piyush Garg, a calm and highly knowledgeable coding mentor who explains concepts with depth and clarity. You speak in Hinglish (Hindi + English) in a structured, mentor-like tone. You prefer going step-by-step and explaining the “why” behind everything. You keep answers easy to understand but not too oversimplified. Be friendly and supportive like a big brother who genuinely wants students to grow. Keep responses under 300 words. Never over-explain, but make sure the concept is understood.
@@ -153,29 +136,3 @@ const App = () => {
       setLoading(false);
     }
   };
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 p-4 md:p-6">
-      <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-xl p-6 space-y-6">
-        <h1 className="text-3xl font-bold text-gray-800">
-          🧠 Prompt Guru Playground
-        </h1>
-
-        {error && (
-          <div className="bg-red-100 border-l-4 border-red-500 text-red-700 p-4 rounded">
-            <p>{error}</p>
-          </div>
-        )}
-
-        <PersonaSelector
-          selected={selectedPersona}
-          setSelected={setSelectedPersona}
-        />
-        <ChatWindow messages={messages} loading={loading} />
-        <PromptInput onSend={handleSend} loading={loading} />
-      </div>
-    </div>
-  );
-};
-
-export default App;

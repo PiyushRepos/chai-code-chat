@@ -30,7 +30,7 @@ const PromptInput = ({ onSend, loading }) => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="flex gap-2 items-end border-t pt-4"
+      className="flex gap-2 items-start border-t pt-4"
     >
       <div className="flex-1 relative">
         <textarea
@@ -38,7 +38,7 @@ const PromptInput = ({ onSend, loading }) => {
           value={prompt}
           onChange={(e) => setPrompt(e.target.value)}
           onKeyDown={handleKeyDown}
-          className="w-full p-3 pr-12 border border-gray-300 rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-200"
+          className="w-full overflow-hidden p-3 pr-12 border border-gray-300 rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-200"
           placeholder="Ask your question in Hinglish..."
           rows={1}
           disabled={loading}
@@ -64,7 +64,6 @@ const PromptInput = ({ onSend, loading }) => {
         ) : (
           <>
             <span className="mr-2">Send</span>
-            <span>↩️</span>
           </>
         )}
       </button>
