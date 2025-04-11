@@ -1,4 +1,5 @@
 import React from "react";
+import Markdown from "react-markdown";
 
 const ChatWindow = ({ messages, loading }) => {
   return (
@@ -36,7 +37,9 @@ const ChatWindow = ({ messages, loading }) => {
                 ? "Piyush Sir"
                 : "Hitesh & Piyush"}
             </p>
-            <p className="text-sm md:text-base">{msg.text}</p>
+            <p className="text-sm md:text-base">
+              <Markdown>{msg.text}</Markdown>
+            </p>
           </div>
         ))
       )}
