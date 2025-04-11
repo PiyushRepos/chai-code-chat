@@ -2,7 +2,7 @@ import React from "react";
 
 const ChatWindow = ({ messages, loading }) => {
   return (
-    <div className="h-[60vh] overflow-overflow-hidden p-4 bg-gray-50 rounded-xl border border-gray-200 space-y-4">
+    <div className="h-[60vh] overflow-y-auto p-4 bg-gray-50 rounded-xl border border-gray-200 space-y-4">
       {messages.length === 0 ? (
         <div className="h-full flex flex-col items-center justify-center text-gray-400">
           <div className="text-center p-6 max-w-md">
